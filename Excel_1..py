@@ -1,11 +1,11 @@
 from fileinput import filename
 
-from openpyxl import Workdook
+from openpyxl import workdook as wb
 
-workbook = Workdook()
-sheet = workbook.active
+wb = Workbook()
+sheet = wb.active
 
 sheet["A1"] = "Hello"
 sheet["B1"] = "World"
 
-workbook.save(filename="Helo_world.ODF")
+wb.save(filename="Helo_world.xlsx")
